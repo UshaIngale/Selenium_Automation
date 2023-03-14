@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <test thread-count="5" name="Test#1">
+ <groups>
+ 	<define name="allName">
+ 		<include name="Bikes"></include>
+ 		<include name="Cars"></include>
+ 		<include name="Vehicles"></include>
+ 	</define>
+ 	<define name="CarsName">
+ 		<include name="Cars"></include>
+ 	</define>
+ 	<define name="BikesName">
+ 		<include name="Bikes"></include>
+ 	</define>
+ 	<define name="VehiclesName">
+ 		<include name="Vehicles"></include>
+ 	</define>
+
+ 	<run>
+ 		<!--  include  name="Cars"></include>
+ 		<include  name="Vehicles"></include -->
+ 		<!--  exclude name="Bikes"> </exclude> -->
+ 		<include name="allName"></include>		
+ 	</run>
+ </groups>
+ 
+    <classes>
+      <class name="day30dec22.GroupsTestCase"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
